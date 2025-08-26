@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/api/gps")
 public class GpsController {
 
-    @GetMapping("/get")
+    @GetMapping("")
     public String getCoordinates() {
         return new String("Hello, how are you?");
     }
