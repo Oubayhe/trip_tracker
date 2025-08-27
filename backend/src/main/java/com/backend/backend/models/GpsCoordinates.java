@@ -45,22 +45,22 @@ public class GpsCoordinates {
     private boolean ignition;
 
     @Column(name = "rpm")
-    private int rpm;
+    private Integer rpm = 0;
 
     @Column(name = "fuel_rate")
-    private double fuelRate;
+    private Double fuelRate = 0.0;
 
     @Column(name = "tfu")
-    private double tfu;
+    private Double tfu = 0.0;
 
     @Column(name = "odo")
-    private double odo;
+    private Double odo = 0.0;
 
     @Column(name = "SatInView")
-    private int satInView;
+    private Integer satInView = 0;
 
     @Column(name = "signal")
-    private int signal;
+    private Integer signal = 0;
 
     @Column(name = "heading")
     private int heading;
