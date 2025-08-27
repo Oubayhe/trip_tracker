@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonHeader, IonToolbar, IonTitle, IonContent } from '@ionic/angular/standalone';
 import * as L from 'leaflet';
+import { GpsService } from '../services/gps-service';
 
 @Component({
   selector: 'app-home',
@@ -9,13 +10,13 @@ import * as L from 'leaflet';
   imports: [IonHeader, IonToolbar, IonTitle, IonContent],
 })
 export class HomePage {
-  constructor() {}
+  private map!: L.Map;
+
+  constructor(private gpsService: GpsService) {}
 
   ngOnInit() {
-    var map = L.map('map').setView([51.505, -0.09], 13);
-
-    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-    }).addTo(map);
+    this.gpsService.getAllCoordinates().subscribe((data) => {
+      console.log("Data: ", data)
+    })
   }
 }
