@@ -14,9 +14,14 @@ export class HomePage {
 
   constructor(private gpsService: GpsService) {}
 
-  ngOnInit() {
+  ionViewDidEnter() {
     this.gpsService.getAllCoordinates().subscribe((data) => {
       console.log("Data: ", data)
     })
+
+    this.map = L.map('map').setView([35.62, 10.73], 13);
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(this.map);
   }
 }
