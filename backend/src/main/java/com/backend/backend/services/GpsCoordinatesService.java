@@ -16,6 +16,6 @@ public class GpsCoordinatesService {
     }
 
     public List<GpsCoordinates> getAllCoordinates() {
-        return gpsCoordinatesRepository.findAll();
+        return gpsCoordinatesRepository.findAllByOrderByDateAsc();
     }
 }
