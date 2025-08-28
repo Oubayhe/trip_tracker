@@ -1,8 +1,9 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
-      <ion-button (click)="startAnimation()">Start Moving / Commencer</ion-button>
+      <ion-button (click)="startAnimation()">Start / Proceed Moving</ion-button>
+      <ion-button color="danger" (click)="stopAnimation()">Stop Moving</ion-button>
+      <ion-button  (click)="restartAnimation()">Restart Moving</ion-button>
     </ion-title>
   </ion-toolbar>
 </ion-header>
