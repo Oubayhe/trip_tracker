@@ -2,6 +2,10 @@
 
 A simple GPS tracking application built with **Ionic Angular** frontend and **Java Spring Boot** backend using **Leaflet** maps to display and animate vehicle movement along GPS coordinates.
 
+## Screenshots:
+![](./media/image_1.png)
+![](./media/image_2.png)
+
 ## Features
 
 - Interactive map displaying GPS route with polyline
